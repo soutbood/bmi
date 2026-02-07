@@ -11,6 +11,18 @@
     --par-light: #ebf4fc;
 }
 
+/* Dark theme applied to body when dark mode is active */
+body.dark-theme {
+    --primary: #d1e8ff;
+    --secondary: #c2d7ec;
+    --accent: #a4c3e0;
+    --light: #1a3d63;
+    --bg: #0a1931;
+    --text-light: #0a1931;
+    --text-dark: #ffffff;
+    --par-light: #1a3d63;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -145,6 +157,13 @@
     margin: auto;
 }
 
+/* Input text color for dark theme */
+body.dark-theme .inputW input,
+body.dark-theme .inputH input {
+    color: var(--text-dark);
+    background-color: var(--bg);
+}
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -190,28 +209,102 @@ button:hover {
     width: 140px;
     height: auto;
     margin: 0 auto;
-    fill: var(--secondary);
     transition: fill 0.4s ease, transform 0.4s ease;
 }
 
-.fig.normal {
-    fill: #66bb6a;
+/* Language Toggle Button */
+.lang-toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
-.fig.underweight {
-    fill: #4fc3f7;
+.lang-toggle-btn:hover {
+    background-color: var(--accent);
+    opacity: 0.8;
 }
 
-.fig.overweight {
-    fill: #ffca28;
+.en-lang, .ar-lang {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.fig.obese {
-    fill: #fb8c00;
+.en-lang {
+    opacity: 1;
 }
 
-.fig.extreme {
-    fill: #e53935;
+.ar-lang {
+    opacity: 0;
+}
+
+body.arabic .en-lang {
+    opacity: 0;
+}
+
+body.arabic .ar-lang {
+    opacity: 1;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-light);
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--accent);
+    opacity: 0.8;
+}
+
+.sun-icon, .moon-icon {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sun-icon {
+    opacity: 1;
+}
+
+.moon-icon {
+    opacity: 0;
+}
+
+body.dark-theme .sun-icon {
+    opacity: 0;
+}
+
+body.dark-theme .moon-icon {
+    opacity: 1;
+}
+
+/* Arabic text styling - no layout changes */
+body.arabic {
+    /* Only change text for Arabic, no layout changes */
 }
 
 @media (max-width: 767px) {
