@@ -182,9 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons[0].textContent = texts.calculateBtn;  // Calculate button
     buttons[1].textContent = texts.resetBtn;      // Reset button
     
-    // Update footer
-    const date = new Date().toISOString().split('T')[0];
-    document.querySelector('.copyright p').textContent = texts.copyright + date;
   }
   
   // Initialize the avatar with the normal state on page load
@@ -198,3 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
