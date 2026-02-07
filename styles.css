@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+    --primary: #0a1931;
+    --secondary: #1a3d63;
+    --accent: #4a7fa7;
+    --light: #b3cfe5;
+    --bg: #f6fafd;
+    --text-light: #ffffff;
+    --text-dark: #0a1931;
+    --par-light: #ebf4fc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    background-color: var(--light);
+    min-height: 100vh;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    padding: 1px;
+    margin-bottom: 10px;
+    border-radius: 88px;
+    max-width: 100%;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.header h1 {
+    color: var(--bg);
+    margin-top: 18px;
+    margin-left: 15px;
+    font-size: xx-large;
+}
+
+.header h4 {
+    color: var(--bg);
+    margin-left: 55px;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 15px;
+    order: 1;
+}
+
+.paragraph {
+    padding: 15px;
+    margin: 4px 20px;
+    box-shadow: 0px 6px 10px #000000e6;
+    background-color: var(--par-light);
+    border-radius: 12px;
+    width: 100%;
+    order: 1;
+}
+
+.par {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.input,
+.result {
+    background-color: var(--secondary);
+    box-shadow: 0px 6px 10px #000000e6;
+    border-radius: 12px;
+    padding: 30px;
+    min-height: 380px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    order: 2;
+}
+
+.result {
+    order: 3;
+}
+
+.input h3 {
+    font-size: 24px;
+    color: var(--light);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff33;
+}
+
+.input form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-grow: 1;
+    margin-top: 12px;
+}
+
+.inputW,
+.inputH {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputW label,
+.inputH label {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+}
+
+.inputW input,
+.inputH input {
+    padding: 10px;
+    border: 2px solid var(--text-light);
+    border-radius: 22px;
+    font-size: 16px;
+    background-color: white;
+    color: var(--text-dark);
+    max-width: 100%;
+    margin: auto;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px 10px 0 10px;
+}
+
+button {
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+    margin-bottom: 22px;
+}
+
+button:hover {
+    background-color: #3a6f97;
+}
+
+.bmi-v {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#bmiValue {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--bg);
+    min-width: 120px;
+    text-align: center;
+}
+
+/* SVG */
+.fig {
+    width: 140px;
+    height: auto;
+    margin: 0 auto;
+    fill: var(--secondary);
+    transition: fill 0.4s ease, transform 0.4s ease;
+}
+
+.fig.normal {
+    fill: #66bb6a;
+}
+
+.fig.underweight {
+    fill: #4fc3f7;
+}
+
+.fig.overweight {
+    fill: #ffca28;
+}
+
+.fig.obese {
+    fill: #fb8c00;
+}
+
+.fig.extreme {
+    fill: #e53935;
+}
+
+@media (max-width: 767px) {
+
+    .header h1,
+    h4 {
+        text-align: center;
+    }
+
+    .header h4 {
+        margin: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 40px;
+    }
+
+    .input,
+    .result {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .inputW input,
+    .inputH input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.copyright {
+    display: none;
+}
