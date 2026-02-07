@@ -10,8 +10,20 @@
     <main class="main">
       <!-- Header -->
       <header class="header">
-        <h1>BMI Calculator</h1>
-        <h4>Calculate your Body Mass Index</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+          <div>
+            <h1>BMI Calculator</h1>
+            <h4>Calculate your Body Mass Index</h4>
+          </div>
+          <button id="langToggle" class="lang-toggle-btn" aria-label="Switch language">
+            <span class="en-lang">EN</span>
+            <span class="ar-lang">AR</span>
+          </button>
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+          </button>
+        </div>
       </header>
 
       <!--container-->
@@ -56,7 +68,7 @@
           <div class="bmi-v">
             <svg
               id="bmiFigure"
-              class="fig normal"
+              class="fig"
               viewBox="0 0 120 220"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -80,11 +92,7 @@
         </section>
       </div>
 
-      <!--copy right-->
-      <footer class="copyright">
-        <p>Date: 2026-02-07</p>
-      </footer>
-    </main>
+      </main>
 	<script src="script.js"></script>
 
   </body>
